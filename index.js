@@ -52,7 +52,7 @@ program
 	.version('0.1.0 alpha')
 
 program
-	.command('<message>')
+	.command('log <message>')
 	.description('Make a log entry.')
 	.action(function(message){
 
