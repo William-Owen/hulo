@@ -1,26 +1,29 @@
 # Hulo
-Human Log
 
-## Install
+A command line logging tool for humans to record human stuff.
 
-`npm install hulo -g`
+*This project is in the early stages of development; not ready for real use.*
+
+## Installation
+
+`npm install -g hulo`
 
 ## Log
 
-`hulo log <message>`
+`$ hulo log <message>`
 
 Example:
 
-`hulo log "Hello world"`
+`$ hulo log "Hello world"`
 
 ## Last
 
-`hulo last`
+`$ hulo last`
 
 Example:
 
-`hulo last <number of items>`
+`$ hulo last <number of items>`
 
 Example, will return the last three elements:
 
-`hulo last 3`
+`$ hulo last 3`
