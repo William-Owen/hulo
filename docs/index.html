@@ -37,9 +37,24 @@
 			font-size: 1rem;
 			font-weight: 400;
 			line-height: 1.5;
-			color: #212529;
+			color: #343a40;
 			text-align: left;
 			background-color: #fff;
+
+		}
+
+		p {
+
+			font-size: 1.05rem;
+			line-height: 1.9rem;
+			margin-bottom: 3rem;
+
+		}
+
+		pre[class*=language-]:last-child,
+		p:last-child {
+
+			margin-bottom: 0;
 
 		}
 
@@ -48,6 +63,32 @@
 			font-size: 2.5rem;
 			font-weight: 300;
 			line-height: 1.2;
+
+		}
+
+		h2 {
+
+			font-size: 2rem;
+			font-weight: 300;
+			line-height: 1.2;
+			margin: 0 0 4rem 0;
+			color: #343a40;
+
+		}
+
+		h3 {
+
+			font-size: 1.8rem;
+			font-weight: 300;
+			line-height: 1.2;
+			margin: 0 0 4rem 0;
+			color: #343a40;
+
+		}
+
+		pre[class*=language-] {
+
+			margin: 1rem 0 4rem;
 
 		}
 
@@ -67,6 +108,23 @@
 
 			max-width: 800px;
 			margin: 0 auto;
+			padding: 0 1rem;
+
+		}
+
+		.warning {
+
+			padding: 2rem;
+			margin-bottom: 2rem;
+			background-color: #f5f2f0;
+			border-radius: .3rem;
+			/*color: #fff;*/
+
+		}
+
+		.warning strong {
+
+			color: #a53c47;
 
 		}
 
@@ -74,7 +132,7 @@
 
 			padding: 4rem;
 			margin-bottom: 2rem;
-			background-color: #e9ecef;
+			background-color: #cddc39;
 			border-radius: .3rem;
 
 		}
@@ -97,9 +155,23 @@
 
 		}
 
+		section {
+
+			padding: 4rem 2rem;
+			border-bottom: 1px solid #eee;
+
+		}
+
+		section:last-child {
+
+			border-bottom: none;
+
+		}
+
 		footer {
 
-			background-color: #e9ecef;
+			background-color: #f5f2f0;
+			border-top: 5px solid #cddc39;
 
 		}
 
@@ -149,24 +221,42 @@
 
 		<main role="main">
 
-			<div class="big-feature">
+			<div class="warning">
 
-				<h2>hulo: the logger for humans.</h2>
-				<p class="lead">Your code has commit messages, capture all the other stuff with hulo.</p>
-				<hr class="my-4">
-				<p>When working on large or multiple projects, keeping track of what you were thinking when you last looked at the code is almost as important as the latest commits. With hulo you can commit a simple log file along with your code and use the handy command-line tool to update it with the latest meat-space thinking around the project.</p>
+				<strong>Warning:</strong> This project is a work in progress. Do not use it at this time. It will probably have frequent breaking changes, major bugs and might well start hiding your clean socks when you are late for an appointment.
 
 			</div>
 
-			<section style="padding: 4rem 2rem; border-bottom: 1px solid #eee">
+			<div class="big-feature">
+
+				<h2>hulo: the logger for humans.</h2>
+				<p class="lead">Your code has commit messages,<br />capture all the other stuff with hulo.</p>
+				<hr class="my-4">
+				<p>When working on large or multiple projects, keep track of what you were thinking when you last looked at the code. With hulo you can commit a simple log file along with your code and use the handy command-line tool to update it with the latest meat-space thinking around the project.</p>
+
+			</div>
+
+			<section style="padding: 4rem 2rem">
+
+				<h2>Install hulo</h2>
+
+				<p>Hulo is installed via the <a href="https://www.npmjs.com/package/hulo">NPM package</a> through <a href="https://www.npmjs.com/">NPM</a>. For more information see the  <a href="https://docs.npmjs.com/getting-started/installing-node">NPM installation and upgrade instructions</a></p>
+
+				<pre><code class="language-bash">$ npm i hulo -g</code></pre>
+
+			</section>
+
+			<section>
 
 				<h2>Log it</h2>
+
+				<p>Hulo will log your message to hulo.db file stored in your user directory.</p>
 
 				<pre><code class="language-bash">$ hulo log "I love hulo!"</code></pre>
 
 			</section>
 
-			<section style="padding: 4rem 2rem; border-bottom: 1px solid #eee">
+			<section>
 
 				<h2>Read it</h2>
 
@@ -174,7 +264,7 @@
 
 			</section>
 
-			<section style="padding: 4rem 2rem; border-bottom: 1px solid #eee">
+			<section>
 
 				<h2>Read the last 3</h2>
 
@@ -182,7 +272,7 @@
 
 			</section>
 
-			<section style="padding: 4rem 2rem; border-bottom: 1px solid #eee">
+			<section>
 
 				<h2>Count it</h2>
 
@@ -190,13 +280,19 @@
 
 			</section>
 
-			<section style="padding: 4rem 2rem">
+			<section>
 
-				<h2>Install hulo</h2>
+				<h2>Features</h2>
 
-				<p>Hulo is installed via the <a href="https://www.npmjs.com/package/hulo">NPM package manager</a>.</p>
+				<h3>Context aware</h3>
 
-				<pre><code class="language-bash">$ npm i hulo -g</code></pre>
+				<p>Along with the message hulo will record the <strong>date and time</strong>, the <strong>current working directory</strong> from where you logged the message.
+
+				<h3>Git aware</h3>
+
+				<p>If the message was logged in a git repository, hulo will also record <strong>repository name</strong> and <strong>branch</strong>.</p>
+
+				<p>All this information will help you pull out the right information when you need it</p>
 
 			</section>
 
@@ -249,10 +345,7 @@
 
 			</div>
 
-			<p class="float-right"><a href="#">Back to top</a></p>
-
-			<p>Maintained by <a href="http://www.william-owen.co.uk">William Owen UK Limited</a></p>
-
+			<p>Maintained by <a href="http://www.william-owen.co.uk">William Owen UK Limited</a> | <a href="#">Back to top</a></p>
 
 		</div>
 
