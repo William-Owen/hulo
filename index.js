@@ -8,25 +8,25 @@ const db = low('hulo.db.json')
 
 const out = function (message) {
 
-	// This is a helper function for formating a message to the console.
+	// This is a helper function for formatting a message to the console.
 
 	console.log(`${chalk.bold('Hulo:')} ${message}`);
 	return true;
 
 };
 
-const done = function () {
+const done = function (strMessage) {
 
 	// This is a helper function to send a done message to the console.
 
-	console.log(`${chalk.bold('hulo:')} ${chalk.green('Done.')}`);
+	console.log(`${chalk.bold('hulo:')} ${chalk.green(strMessage)}`);
 	return true;
 
 };
 
 const value = function (value) {
 
-	// Helper fimctopm to output value
+	// Helper function to output value
 
 	return chalk.blue(value);
 
@@ -34,11 +34,13 @@ const value = function (value) {
 
 const problem = function (value) {
 
-	// Helper fimctopm to output problem
+	// Helper function to output problem
 
 	return out(chalk.red(value));
 
 };
+
+// initialise the database
 
 db.defaults({
 
@@ -47,6 +49,8 @@ db.defaults({
 	count: []
 
 }).write()
+
+// Define program command line UI
 
 program
 	.version('0.1.0 alpha')
@@ -63,7 +67,7 @@ program
 			})
 			.write();
 
-		done();
+		done('Message logged.');
 
 	});
 
@@ -92,6 +96,18 @@ program
 program
 	.command('count <item> [number]')
 	.description('Count an item.')
+	.action(function(item, number){
+
+		// number = number || 1;
+		// out(`Counting ${value(number)} ${value(item)} at ${timeStamp()}`);
+		// done();
+		problem('Count not currently implemented.');
+
+	});
+
+program
+	.command('howmany <item>')
+	.description('Get the current count for an item.')
 	.action(function(item, number){
 
 		// number = number || 1;
