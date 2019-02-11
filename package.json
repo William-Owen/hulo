@@ -1,6 +1,6 @@
 {
   "name": "hulo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A command like logging tool for Humans.",
   "main": "index.js",
   "scripts": {
