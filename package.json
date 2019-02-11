@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/William-Owen/hulo#readme",
   "dependencies": {
-    "chalk": "^2.0.1",
-    "commander": "^2.11.0",
-    "git-branch": "^1.0.0",
-    "git-repo-name": "^0.6.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "git-branch": "^2.0.1",
+    "git-repo-name": "^1.0.1",
     "git-user-name": "^2.0.0",
-    "inquirer": "^4.0.1",
-    "lowdb": "^0.16.2",
-    "moment": "^2.18.1",
+    "inquirer": "^6.2.2",
+    "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
     "user-settings": "^0.2.0"
   }
 }
