@@ -18,7 +18,7 @@ const gitBranch = require('git-branch')
 const gitRepoName = require('git-repo-name')
 const fs = require('fs')
 const FileSync = require('lowdb/adapters/FileSync')
-
+const packaage = require('./package.json')
 const program = new commander.Command()
 const prompt = inquirer.createPromptModule()
 
@@ -182,7 +182,7 @@ hulo.log = (message) => {
 // Command line UI description
 
 program
-	.version('1.0.4 alpha', '-v, --version', 'output the current version');
+	.version(packaage.version, '-v, --version', 'output the current version');
 
 program
 	.command('log [message]')
