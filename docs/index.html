@@ -256,17 +256,19 @@
 				<hr class="my-4">
 				<p class="lead">Your code has commit messages,<br />capture all the other stuff with hulo.</p>
 				<hr class="my-4">
-				<p>When working on large or multiple projects, keep track of what you were thinking when you last looked at the code. With hulo you can commit a simple log file along with your code and use the handy command-line tool to update it with the latest meat-space thinking around the project.</p>
+
+				<p>It can be tricky to remember what you were thinking about when you last looked at some code; especially when you are working on multiple projects or coming back to a project after some time has passed. Hulo lets you leave a note for your future self so that you can pick up pick-up where you left off. </p>
+				<p>You can also use it to track what you were doing and when; handy for when you need to bill a client or want better understand what you have been spending your time on.</p>
 
 			</div>
 
 			<section style="padding: 4rem 2rem">
 
-				<h2>Install hulo</h2>
+				<h2>Install it</h2>
 
 				<p>Hulo is installed via the <a href="https://www.npmjs.com/package/hulo">NPM package</a> through <a href="https://www.npmjs.com/">NPM</a>. For more information see the  <a href="https://docs.npmjs.com/getting-started/installing-node">NPM installation and upgrade instructions</a></p>
 
-				<pre><code class="language-bash">$ npm i hulo -g</code></pre>
+				<pre><code class="language-bash">npm i hulo -g</code></pre>
 
 			</section>
 
@@ -276,7 +278,7 @@
 
 				<p>Hulo will log your message to hulo.db file stored in your user directory.</p>
 
-				<pre><code class="language-bash">$ hulo log "I love hulo!"</code></pre>
+				<pre><code class="language-bash">hulo log "I love hulo!"</code></pre>
 
 			</section>
 
@@ -284,41 +286,21 @@
 
 				<h2>Read it</h2>
 
-				<pre><code class="language-bash">$ hulo last</code></pre>
+				<h3>Read last entry</h3>
 
-			</section>
+				<pre><code class="language-bash">$ hulo read</code></pre>
 
-			<section>
+				<h3>Read last 3 &lt;n&gt; entries</h3>
 
-				<h2>Read it (coming soon)</h2>
+				<pre><code class="language-bash">$ hulo read 3</code></pre>
 
-				<ul>
+				<h3>Read last 3 all entries</h3>
 
-					<li>last log at current directory </li>
-					<li>last log at on current branch</li>
-					<li>last log at on branch xxxx</li>
-					<li>last log at on current repo</li>
-					<li>last log at on repo xxxx</li>
-					<li>last log by me</li>
-					<li>last log by xxxxx</li>
+				<pre><code class="language-bash">$ hulo read -a</code></pre>
 
-				</ul>
+				<h3>Verbose output</h3>
 
-			</section>
-
-			<section>
-
-				<h2>Read the last 3</h2>
-
-				<pre><code class="language-bash">$ hulo last 3</code></pre>
-
-			</section>
-
-			<section>
-
-				<h2>Count it</h2>
-
-				<pre><code class="language-bash">$ hulo count coffee 1</code></pre>
+				<pre><code class="language-bash">$ hulo read -v</code></pre>
 
 			</section>
 

@@ -1,6 +1,6 @@
 {
   "name": "hulo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A command like logging tool for Humans.",
   "main": "index.js",
   "scripts": {
@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/William-Owen/hulo#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^2.19.0",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
     "git-branch": "^2.0.1",
     "git-repo-name": "^1.0.1",
     "git-user-name": "^2.0.0",
-    "inquirer": "^6.2.2",
+    "inquirer": "^7.0.0",
     "lowdb": "^1.0.0",
     "moment": "^2.24.0",
     "user-settings": "^0.2.0"
