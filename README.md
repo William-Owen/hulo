@@ -1,8 +1,8 @@
 # Hulo
 
-A command line logging tool for humans to record human stuff.
+**This project is in the early stages of development; not ready for real use.**
 
-*This project is in the early stages of development; not ready for real use.*
+A command line logging tool for humans to record human stuff.
 
 ## Installation
 
